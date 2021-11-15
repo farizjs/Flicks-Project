@@ -92,7 +92,7 @@ HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", None)
 # Custom (forked) repo URL for updater.
 UPSTREAM_REPO_URL = os.environ.get(
     "UPSTREAM_REPO_URL",
-    "https://github.com/apisuserbot/WeebProject-Apis.git")
+    "https://github.com/fjgaming212/Web-Project.git")
 # UPSTREAM_REPO_URL branch, the default is master
 UPSTREAM_REPO_BRANCH = os.environ.get(
     "UPSTREAM_REPO_BRANCH", "main")
@@ -109,7 +109,7 @@ OCR_SPACE_API_KEY = os.environ.get("OCR_SPACE_API_KEY", None)
 # Default .alive name anf logo
 ALIVE_NAME = os.environ.get("ALIVE_NAME") or None
 ALIVE_LOGO = os.environ.get(
-    "ALIVE_LOGO") or "https://telegra.ph/file/9e888cb1e485adf3a179e.mp4"
+    "ALIVE_LOGO") or "https://telegra.ph/file/ca58e332eb9cec5256c77.jpg"
 
 # remove.bg API key
 REM_BG_API_KEY = os.environ.get("REM_BG_API_KEY", None)
@@ -286,7 +286,7 @@ with bot:
 
 
 async def check_alive():
-    await bot.send_message(BOTLOG_CHATID, "**⚡WeebProject-Apis⚡** ```Has Been Active!```")
+    await bot.send_message(BOTLOG_CHATID, "**🔥 Web-Project 🔥** ```Has Been Active!```\n\nMaster : {ALIVE_NAME}\n\nSupport @FlicksSupport")
     return
 
 with bot:
@@ -405,7 +405,7 @@ with bot:
                                                [
                                                    custom.Button.url(
                                                        text="Click Here",
-                                                       url=f"https://github.com/apisuserbot/WeebProject-Apis"
+                                                       url=f"https://github.com/fjgaming212/Web-Project"
                                                )
                                                ]
                                            ]
@@ -422,7 +422,7 @@ with bot:
                 result = builder.photo(
                     file=logo,
                     link_preview=False,
-                    text=f"\n**Inline Helper Bot**\n\n**User** {DEFAULTUSER}\n**Version Userbot :** `v{BOT_VER}`\n**Modules :** `{len(modules)}`\n\n**Thanks Your Deploy WeebProject-Apis!**".format(
+                    text=f"\n**Inline Helper Bot**\n\n**User** {DEFAULTUSER}\n**Version Userbot :** `v{BOT_VER}`\n**Modules :** `{len(modules)}`\n\n**Thanks Your Deploy Web-Project!**".format(
                         len(dugmeler),
                     ),
                     buttons=buttons,
@@ -436,15 +436,15 @@ with bot:
             else:
                 result = builder.article(
                     "Userbot",
-                    text="""**You Can Make WeebProject-Apis Your Own Way :** [Click Here](t.me/KingUserbotSupport)""",
+                    text="""**You Can Make Web-Project Your Own Way :** [Click Here](t.me/FlicksSupport)""",
                     buttons=[
                         [
                             custom.Button.url(
                                 "Repository",
-                                "https://github.com/apisuserbot/WeebProject-Apis"),
+                                "https://github.com/fjgaming212/Web-Project"),
                             custom.Button.url(
                                 "Developer",
-                                "t.me/PacarFerdilla")],
+                                "t.me/FJ_GAMING")],
                     ],
                     link_preview=False,
                 )
