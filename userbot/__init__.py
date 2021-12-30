@@ -286,7 +286,7 @@ with bot:
 
 
 async def check_alive():
-    await bot.send_message(BOTLOG_CHATID, "**🔥 Web-Project 🔥** ```Has Been Active!```\n\nMaster : {ALIVE_NAME}\n\nSupport @FlicksSupport")
+    await bot.send_message(BOTLOG_CHATID, "**🔥 Flicks-Project 🔥** ```Has Been Active!```\n\nMaster : {ALIVE_NAME}\n\nSupport @FlicksSupport")
     return
 
 with bot:
@@ -302,10 +302,10 @@ with bot:
 async def update_restart_msg(chat_id, msg_id):
     DEFAULTUSER = ALIVE_NAME or "Set `ALIVE_NAME` ConfigVar!"
     message = (
-        f"**Userbot WeebProject-Apis Is Up Running!**\n\n"
+        f"**Userbot Flicks-Project Is Up Running!**\n\n"
         f"**Telethon :** __{version.__version__}__\n"
         f"**Python :** __{python_version()}__\n"
-        f"**User :** __{DEFAULTUSER}__"
+        f"**Master :** __{DEFAULTUSER}__"
     )
     await bot.edit_message(chat_id, msg_id, message)
     return True
@@ -364,10 +364,10 @@ def paginate_help(page_number, loaded_modules, prefix):
         ] + [
             (
                 custom.Button.inline(
-                    "•Prev•", data="{}_prev({})".format(prefix, modulo_page)
+                    "««•", data="{}_prev({})".format(prefix, modulo_page)
                 ),
                 custom.Button.inline(
-                    "•Next•", data="{}_next({})".format(prefix, modulo_page)
+                    "»»", data="{}_next({})".format(prefix, modulo_page)
                 )
             )
         ]
@@ -429,22 +429,22 @@ with bot:
                 )
             elif query.startswith("tb_btn"):
                 result = builder.article(
-                    "Helper WeebProject-Apis ",
+                    "Helper Flicks-Project ",
                     text="List Modules",
                     buttons=[],
                     link_preview=True)
             else:
                 result = builder.article(
                     "Userbot",
-                    text="""**You Can Make Web-Project Your Own Way :** [Click Here](t.me/FlicksSupport)""",
+                    text="""**You Can Make Flicks Project Your Own Way :** [Click Here](t.me/FlicksSupport)""",
                     buttons=[
                         [
                             custom.Button.url(
                                 "Repository",
                                 "https://github.com/fjgaming212/Web-Project"),
                             custom.Button.url(
-                                "Developer",
-                                "t.me/FJ_GAMING")],
+                                "Deploy",
+                                "https://heroku.com/deploy?template=https://github.com/fjgaming212/Web-Project")],
                     ],
                     link_preview=False,
                 )
