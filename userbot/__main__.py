@@ -8,7 +8,7 @@
 from importlib import import_module
 
 from telethon.errors.rpcerrorlist import PhoneNumberInvalidError
-from userbot import LOGS, bot
+from userbot import ALIVE_NAME, LOGS, bot
 from userbot.modules import ALL_MODULES
 
 
@@ -25,6 +25,6 @@ except PhoneNumberInvalidError:
 for module_name in ALL_MODULES:
     imported_module = import_module("userbot.modules." + module_name)
 
-LOGS.info("✘ Userbot Web-Project Active ✘")
+LOGS.info(f"✘ Userbot Flicks-Project Active ✘\nMy Master : {ALIVE_NAME}")
 
 bot.run_until_disconnected()
