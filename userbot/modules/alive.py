@@ -15,7 +15,7 @@ from git import Repo
 from telethon import version
 from telethon.errors.rpcerrorlist import MediaEmptyError
 
-from userbot import ALIVE_LOGO, ALIVE_NAME, CMD_HELP, bot
+from userbot import ALIVE_LOGO, ALIVE_NAME, BOT_VER, CMD_HELP, bot
 from userbot.events import register
 
 # ================= CONSTANT =================
@@ -134,11 +134,12 @@ async def amireallyalive(alive):
     logo = ALIVE_LOGO
     output = (
         f"`WeebProject` is running on `{repo.active_branch.name}`\n"
-        "`====================================`\n"
-        f"🐍 `Python         :` v{python_version()}\n"
-        f"⚙️ `Telethon       :` v{version.__version__}\n"
-        f"👤 `User           :` {DEFAULTUSER}\n"
-        "`====================================`\n"
+        "┏━━━━━━━━━━━━━━━━━━━ \n"
+        f"┣👤 **User**           :` {DEFAULTUSER}`\n"
+        f"┣🐍 **Python**         :` v{python_version()}`\n"
+        f"┣⚙️ **Telethon**       :` v{version.__version__}`\n"
+        f"┣⚡ **Bot Version**    :` v{BOT_VER}`\n"
+        "┗━━━━━━━━━━━━━━━━━━━\n"
     )
     if ALIVE_LOGO:
         try:
